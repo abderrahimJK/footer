@@ -6,10 +6,97 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" type="image/png" href="<%= BASE_URL %>fath.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      .row {
+    background-color: #141F31;
+    
+}
+.Location {
+    margin-left: 30px;
+}
+.contact {
+    color: white;
+    
+}
+
+.contact h2 {
+    display: block;
+    padding: 20px;
+}
+h2 {
+    padding: 20px;
+    padding-left: 0;
+    color: white;
+}
+
+input[type=text]{
+    width:60%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:20px;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+#Message {
+    width:60%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:20px;
+    outline:none;
+    padding:30px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+iframe {
+    border-radius:4px;
+    outline:none;
+    width : 400px;
+    height: 400px;
+    border:0;
+}
+.button {
+    background-color: #04d5fa;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px;
+}
+footer {
+    color: white;
+    background-color: #12223D;
+    text-align: center;
+    padding: 50px;
+}
+    <style/>
 </head>
 
 <body>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md contact">
+                    <h2>Send Message To Us</h2>
+                    <form action="" method="post"  role="form"  validate>
+                        <input type="text" name="name" id="name" placeholder="Enter Votre Nom" Maxlength="16" required>
+                        <input type="text" name="Email" id="Email" placeholder="contact@example.com" required>
+                        <input type="text" name="Subject" id="Subject" placeholder="Suject">
+                        <textarea type="text" name="Mess age" id="Message" placeholder="Message" required></textarea><br />
+                        <button type="submit" class="button" formenctype="multipart/form-data"  value="multipart/form-data">Envoyé</button>
+                    </form>
+            </div>
+            <div class="col-md Location">
+                    <h2>the Map</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3422.560319498243!2d-6.92847081500844!3d30.926911783299502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdbb1b8ad3872e2b%3A0x21fc4f94dd984f37!2sTechnical%20College!5e0!3m2!1sar!2sma!4v1601285005031!5m2!1sar!2sma"  frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">Ibn Alhaitam &copy; Copyright 2020. All Rights Reserved</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
       Please enable it to continue.</strong>
